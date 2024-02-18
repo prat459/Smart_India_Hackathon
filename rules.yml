@@ -1,0 +1,32 @@
+version: "3.1"
+
+rules:
+
+  - rule: Activate assessment form
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Activate assessment form
+    steps:
+      - intent: start
+      - action: assessment_form
+      - active_loop: assessment_form
+
+  - rule: Handle assessment form submission
+    condition:
+      - active_loop: assessment_form
+    steps:
+      - action: assessment_form
+      - active_loop: null
+      - slot_was_set:
+          - requested_slot: null
+      - action: action_say_data
+
+  - rule: Handle goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+      - action: utter_link
+
+

@@ -1,0 +1,236 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - body
+  - bb
+  - skin
+  - hair
+  - wg
+  - food
+  - movements
+  - weather
+  - immunity
+  - metabolism
+  - comm
+  - initiation
+  - memory
+  - age
+  - dp
+  - start
+
+entities:
+  - bo
+  - musculature
+  - st
+  - ht
+  - wga
+  - fbh
+  - m
+  - w
+  - i
+  - me
+  - c
+  - ins
+  - mem
+  - a
+  - d
+  - sta
+
+slots:
+  bo:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: bo
+
+  musculature:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: musculature
+  st:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: st
+  ht:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ht
+  wga:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: wga
+  fbh:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: fbh
+  m:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: m
+  w:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: w
+  i:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: i
+
+  me:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: me
+
+  c:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: c
+
+  ins:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: ins
+
+  mem:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: mem
+
+  a:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: a
+  d:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: d
+
+forms:
+  assessment_form:
+      required_slots:
+       - bo
+       - musculature
+       - st
+       - ht
+       - wga
+       - fbh
+       - m
+       - w
+       - i
+       - me
+       - c
+       - ins
+       - mem
+       - a
+       - d
+
+responses:
+  utter_link:
+    - text : "Here is the analysis"[hi] (\\wsl.localhost\Ubuntu\root\Chatbot\venv\rasaproj\template\chart.png0)
+  utter_ask_bo:
+    - text : "What is your body frame?
+              a) thin     b) medium   c) broad"
+
+  utter_ask_musculature:
+    - text: "What is your body build?
+              a) weakly developed    b) moderate    c)well developed"
+
+  utter_ask_st:
+    - text : "How is your skin? 
+              a) dry    b) soft      c)smooth and firm"
+
+  utter_ask_ht:
+    - text: "How is your hair? 
+              a) oily    b)thick     c) prone to breaks"
+
+  utter_ask_wga:
+    - text: "What is your tendency to gain weight?
+              a) Recalcitrant(Hard to put on weight)   b) Fluctuating    c)Obesity"
+
+  utter_ask_fbh:
+    - text : "how frequently do you have food?
+              a) Frequent     b) irregular     c) Low capacity to digest food"
+
+  utter_ask_m:
+    - text: "How mobile are you?
+              a) brisk      b) Balanced    c) Less mobile"
+
+  utter_ask_w:
+    - text: "How responsive are you to weather?
+              a) cold intolerant     b) heat intolerant     c) cold and heat intolerant"
+
+  utter_ask_i:
+    - text: "How is your immunity?
+              a) Compromised      b) Great     c)excellent"
+
+  utter_ask_me:
+    - text : "how is your metabolism?
+              a) reasonable    b)Quick     c) Poor"
+
+  utter_ask_c:
+    - text: "How is your communication?
+              a) Talkative    b) Incisive/Sharp   c) less vocal"
+  utter_ask_ins:
+    - text: "How fast do you initiate things?
+              a) responsive      b) Medium    c) Slow"
+
+  utter_ask_mem:
+    - text: "How fast do you grasp things?
+              a) deficient retention  b) tolerable retention     c)good retention"
+
+  utter_ask_a:
+    - text: "How fast do you age?
+              a) Fast      b) normal   c) Steady"
+
+  utter_ask_d:
+    - text: "How is your physical & mental stability?
+            a) movement and speech disorders
+            b) Ulcers
+            c) diabetes, atherosclerotic conditions"
+
+  utter_greet:
+    - text: "Hi! This is Prakriti AI. Let's start with the dosha analysing assessment...."
+
+  utter_goodbye:
+    - text: "Goodbye! If you have more questions, feel free to ask."
+
+  utter_thank_you:
+    - text: "Thank you for providing the information."
+
+actions:
+  - action_say_data
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+

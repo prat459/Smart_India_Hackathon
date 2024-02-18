@@ -1,0 +1,113 @@
+version : "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - good morning
+      - hey
+
+  - intent: body
+    examples : |
+      - I am  [thin](bo)
+      - I am [medium](bo)
+      - I am [broad](bo)
+
+  - intent : bb
+    examples : |
+      - [weakly developed](musculature)
+      - [moderate](musculature)
+      - [well developed](musculature)
+
+  - intent : skin
+    examples: |
+      - [dry, cracked](st)
+      - [soft, thin, with tendency for moles and acne](st)
+      - [smooth and firm , clear complexion](st)
+
+  - intent: hair
+    examples : |
+      - [prone to breaks](ht)
+      - [oily, early greying](ht)
+      - [Thick, smooth, and firm](ht)
+
+  - intent: wg
+    examples: |
+      - [Recalcitrant, Hard to put on weight](wga)
+      - [Fluctuating](wga)
+      - [Tendency to obesity](wga)
+
+  - intent: food
+    examples : |
+      - [Frequent, variable, and irregular](fbh)
+      - [Higher capacity for food and water consumption](fbh)
+      - [Low digestive capacity and stable food habits](fbh)
+
+  - intent: movements
+    examples : |
+      - [excessive, brisk](m)
+      - [Balanced](m)
+      - [Less mobile, slow](m)
+
+  - intent: weather
+    examples : |
+      - [cold intolerant](w)
+      - [heat intolerant](w)
+      - [cold and heat intolerant](w)
+
+  - intent: immunity
+    examples : |
+      - [Compromised](i)
+      - [Great](i)
+      - [excellent](i)
+
+  - intent: metabolism
+    examples : |
+      - [reasonable, moderate](me)
+      - [Quick](me)
+      - [Poor](me)
+
+  - intent: comm
+    examples : |
+      - [Talkative](c)
+      - [Sharp, incisive](c)
+      - [Less vocal with good communication skills](c)
+
+  - intent: initiation
+    examples : |
+      - [responsive, enthusiastic](ins)
+      - [Medium, convicting](ins)
+      - [Slow](ins)
+
+  - intent: memory
+    examples : |
+      - [deficient retention](mem)
+      - [Moderate grasping, tolerable retention](mem)
+      - [Slow grasping, good retention](mem)
+
+  - intent: age
+    examples : |
+      - [Fast](a)
+      - [normal](a)
+      - [Steady](a)
+
+  - intent: dp
+    examples: |
+      - [Developmental, neurological, dementia, movement, speech disorders, arrhythmias.](d)
+      - [Ulcer, bleeding disorders, skin diseases](d)
+      - [diabetes, atherosclerotic conditions](d)
+
+  - intent: goodbye
+    examples: |
+      - bye
+      - goodbye
+      - Bye
+
+  - intent: start
+    examples: |
+      - [let's start](sta)
+      - [Let's begin](sta)
+      - [ok](sta)
+      
+      
+    
