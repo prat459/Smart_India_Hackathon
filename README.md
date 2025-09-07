@@ -25,15 +25,31 @@ The chatbot handles **structured queries and FAQs**, providing deterministic res
 ---
 
 ## 🚀 Setup Instructions
-1. Clone this repository:
+- 1. Clone this repository:
    git clone https://github.com/your-username/Smart_India_Hackathon.git
    cd Smart_India_Hackathon
-2. Install dependencies:
+- 2. Install dependencies:
     pip install rasa flask
-3. Train the chatbot:
+- 3. Train the chatbot:
     rasa train
-4. Run the chatbot server:
+- 4. Run the chatbot server:
     rasa run actions
     rasa shell
-5. Start the Flask app for the frontend:
+- 5. Start the Flask app for the frontend:
     python app.py
+
+---
+
+## 👥 Team
+
+- This project was developed collaboratively as part of the Smart India Hackathon team.
+
+---
+
+## 📌 Future Improvements
+
+- Enhance NLP with transformer-based models.
+
+- Add support for multilingual queries.
+
+- Deploy on cloud for large-scale access.
